@@ -1,16 +1,23 @@
 :root {
-    --clr-primary-400: hsl(158, 36%, 37%);
-    --clr-secondary-200: hsl(30, 38%, 92%);
+  --clr-primary-400: hsl(158, 36%, 37%);
+  --clr-secondary-200: hsl(30, 38%, 92%);
 
-    --clr-netural-900: hsl(212, 21%, 14%);
-    --clr-netural-400: hsl(228, 12%, 48%);
-    --clr-netural-100: hsl(0, 0%, 100%);
+  --clr-netural-900: hsl(212, 21%, 14%);
+  --clr-netural-400: hsl(228, 12%, 48%);
+  --clr-netural-100: hsl(0, 0%, 100%);
 
-    --ff-accent: 'Fraunces', serif;
-    --ff-base: 'Montserrat', sans-serif;
+  --ff-accent: 'Fraunces', serif;
+  --ff-base: 'Montserrat', sans-serif;
 
-    --fw-regular: 500;
-    --fw-bold: 700;
+  --fw-regular: 500;
+  --fw-bold: 700;
+}
+
+/* Utilities */
+.flex-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 /*
@@ -19,14 +26,14 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*
     2. Remove default margin
   */
 * {
-    margin: 0;
+  margin: 0;
 }
 
 /*
@@ -34,7 +41,7 @@
   */
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
 /*
@@ -43,8 +50,8 @@ body {
     5. Improve text rendering
   */
 body {
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*
@@ -55,8 +62,8 @@ picture,
 video,
 canvas,
 svg {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /*
@@ -66,7 +73,7 @@ input,
 button,
 textarea,
 select {
-    font: inherit;
+  font: inherit;
 }
 
 /*
@@ -79,5 +86,56 @@ h3,
 h4,
 h5,
 h6 {
-    overflow-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* general styling */
+
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.875rem;
+  color: var(--clr-netural-400);
+  background-color: var(--clr-secondary-200);
+
+  /* for this project only */
+  /* min-height: 100vh;  (optional) */
+  display: grid;
+  place-content: center;
+  margin: 1rem;
+}
+
+/* product styles */
+
+.product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
+  background-color: var(--clr-netural-100);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.product__content {
+  display: grid;
+  gap: var(--content-spacing);
+  padding: var(--content-padding);
+}
+
+.product__category {
+  font-size: 0.825rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product__title {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--clr-netural-900);
 }
