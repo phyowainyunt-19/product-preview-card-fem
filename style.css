@@ -162,10 +162,12 @@ body {
   background-color: var(--clr-netural-100);
   border-radius: .5rem;
   overflow: hidden;
+  max-width: 600px;
 }
 
 @media (min-width: 600px) {
   .product {
+    --content-spacing: 2rem; 
     grid-template-columns: 1fr 1fr;
   }
 }
